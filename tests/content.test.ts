@@ -53,11 +53,20 @@ describe("Page Content", () => {
     expect(found).toBe(true);
   });
 
-  // Advice is split by reader so "you" always means the same person.
+  // The reader is usually the organizer who was sent the link, so the decline
+  // reply is framed as their own experience as an invitee, and the page ends
+  // on the organizer advice and template rather than on the reply.
   it("should have separate sections for organizers and invitees", () => {
     const headings = Array.from(document.querySelectorAll("h2")).map((h) => h.textContent ?? "");
     expect(headings.some((h) => h.includes("If you're organizing"))).toBe(true);
-    expect(headings.some((h) => h.includes("If you got an invite like this"))).toBe(true);
+    expect(headings.some((h) => h.includes("When you're on the receiving end"))).toBe(true);
+  });
+
+  it("should end the article on the organizer section", () => {
+    const sections = document.querySelectorAll("article > section");
+    expect(sections[sections.length - 1]?.getAttribute("aria-labelledby")).toBe(
+      "if-youre-organizing",
+    );
   });
 
   it("should put the agenda template with the organizer advice", () => {

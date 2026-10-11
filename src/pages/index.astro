@@ -173,6 +173,25 @@ import { homeGraph } from "../jsonld";
 
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
+      <section aria-labelledby="if-you-got-one">
+        <h2
+          id="if-you-got-one"
+          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
+        >
+          When you're on the receiving end
+        </h2>
+
+        <p class="mb-4 leading-relaxed">
+          Everyone gets a mystery invite now and then.
+          <strong>No agenda? Ask for one, or decline politely.</strong> It's a reasonable request,
+          and it often gets you a better meeting.
+        </p>
+
+        <CopyCard heading="What to send back" text={DECLINE_REPLY} label="Reply" />
+      </section>
+
+      <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
+
       <section aria-labelledby="if-youre-organizing">
         <h2
           id="if-youre-organizing"
@@ -189,6 +208,12 @@ import { homeGraph } from "../jsonld";
           You'd be surprised how often it can. A few minutes of writing often replaces waiting days
           for mutual availability and a 30-minute meeting. If you've done the writing and still need
           to meet, you've just created the agenda.
+        </p>
+
+        <p class="mb-4 leading-relaxed">
+          Writing scales; meetings don't. A well-written document can reach hundreds of people at
+          their convenience without interrupting anyone's flow. A meeting reaches only the people in
+          the room, only at that exact moment.
         </p>
 
         <ul class="arrow-list">
@@ -218,30 +243,6 @@ import { homeGraph } from "../jsonld";
           variant="invite"
         />
       </section>
-
-      <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
-
-      <section aria-labelledby="if-you-got-one">
-        <h2
-          id="if-you-got-one"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
-          If you got an invite like this
-        </h2>
-
-        <p class="mb-4 leading-relaxed">
-          <strong>No agenda? Ask for one, or decline politely.</strong> It's a reasonable request,
-          and it often gets you a better meeting.
-        </p>
-
-        <CopyCard heading="What to send back" text={DECLINE_REPLY} label="Reply" />
-      </section>
-
-      <p class="text-ink mt-10 text-lg leading-snug font-medium dark:text-gray-200">
-        Writing scales; meetings don't. A well-written document can reach hundreds of people at
-        their convenience without interrupting anyone's flow. A meeting reaches only the people in
-        the room, only at that exact moment.
-      </p>
     </article>
 
     <hr class="dark:border-brand-600 mt-10 border-t border-gray-200" />
