@@ -191,14 +191,14 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 ### Semantic (invite mocks only)
 
-- **Bad Red** (`bad-red`) on **Bad Wash** (`bad-wash`): The "Don't do this" icon and the bad invite's header band. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
-- **Good Green** (`good-green`) on **Good Wash** (`good-wash`): The "Try this instead" icon and the good invite's header band, mirrored in dark mode with green-950 and green-300.
+- **Bad Red** (`bad-red`) on **Bad Wash** (`bad-wash`): The bad invite's header band, and the wavy underline on "Quick sync" in the lede. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
+- **Good Green** (`good-green`) on **Good Wash** (`good-wash`): The good invite's header band, mirrored in dark mode with green-950 and green-300.
 
 ### Named Rules
 
 **The One Pen Rule.** Redline Pink (or its dark-mode swap) is the only accent outside the book card. It marks either a correction (punctuation, the struck-through "Quick sync", arrows) or an action (copy, share). If something isn't one of those, it stays neutral.
 
-**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two section icons and the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red wavy underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it. It's wavy, like a spellcheck squiggle, so it reads as a flagged mistake and never as a link.
+**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red wavy underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it. It's wavy, like a spellcheck squiggle, so it reads as a flagged mistake and never as a link.
 
 **The Book Keeps Its Own Colors Rule.** The book card uses Ink Navy, Highlighter Lime, and Bright Redline Pink as fixed values, not theme tokens, so it matches open-and-async.com in both modes. Don't retheme it to fit the page, and don't spread its gradient to the rest of the page.
 
@@ -215,7 +215,7 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 - **Display** (400, 2.5rem from 640px up and 1.875rem below it, line-height 1.1, tight tracking): The page title only, plus "Open & Async" on the book card.
 - **Lede** (500, 1.125rem with line-height 1.5, rising to 1.25rem at 640px): The opening "Imagine getting a calendar invite…" paragraph.
 - **Pull** (600, 1.5rem, tight tracking, balanced): The one pull statement, "Can this start as a document instead?"
-- **Headline** (600, 1.25rem, tight tracking): Section headings ("Don't do this", "Why this matters"), sometimes led by a 22px icon.
+- **Headline** (600, 1.25rem, tight tracking): Section headings ("Before: the mystery invite", "Why this matters"), always plain text. No heading carries an icon; the bad and good signal lives in the invite header bands and the "Before:"/"After:" wording, so every h2 looks the same.
 - **Title** (700, 1.125rem): The subject line inside an invite card.
 - **Body** (400, 1rem, line-height 1.625): Running prose, held to a 640px column of roughly 70 characters.
 - **Body Small** (400, 0.95rem): List items, callouts, invite reactions, and copyable text.

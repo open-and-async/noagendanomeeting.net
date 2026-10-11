@@ -4,7 +4,7 @@ import Invite from "../components/Invite.astro";
 import InviteField from "../components/InviteField.astro";
 import CopyCard from "../components/CopyCard.astro";
 import BookCta from "../components/BookCta.astro";
-import { ArrowRight, CircleCheck, CircleX, Copy, Paperclip, Share } from "@lucide/astro";
+import { ArrowRight, Copy, Paperclip, Share } from "@lucide/astro";
 import {
   AGENDA_TEMPLATE,
   DECLINE_REPLY,
@@ -80,12 +80,8 @@ import { homeGraph } from "../jsonld";
         class="lg:relative lg:left-1/2 lg:grid lg:w-[60rem] lg:-translate-x-1/2 lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-x-10"
       >
         <section aria-labelledby="before" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
-          <h2
-            id="before"
-            class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-          >
-            <CircleX aria-hidden="true" size={22} class="text-red-600 dark:text-red-400" />
-            <span>Before: the mystery invite</span>
+          <h2 id="before" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
+            Before: the mystery invite
           </h2>
 
           <Invite
@@ -108,12 +104,8 @@ import { homeGraph } from "../jsonld";
         </section>
 
         <section aria-labelledby="after" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
-          <h2
-            id="after"
-            class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-          >
-            <CircleCheck aria-hidden="true" size={22} class="text-green-700 dark:text-green-400" />
-            <span>After: same meeting, with an agenda</span>
+          <h2 id="after" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
+            After: same meeting, with an agenda
           </h2>
 
           <Invite
@@ -150,10 +142,7 @@ import { homeGraph } from "../jsonld";
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
       <section aria-labelledby="why-this-matters">
-        <h2
-          id="why-this-matters"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
+        <h2 id="why-this-matters" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
           Why this matters
         </h2>
 
@@ -185,10 +174,7 @@ import { homeGraph } from "../jsonld";
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
       <section aria-labelledby="if-you-got-one">
-        <h2
-          id="if-you-got-one"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
+        <h2 id="if-you-got-one" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
           When you're on the receiving end
         </h2>
 
@@ -204,10 +190,7 @@ import { homeGraph } from "../jsonld";
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
       <section aria-labelledby="if-youre-organizing">
-        <h2
-          id="if-youre-organizing"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
+        <h2 id="if-youre-organizing" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
           If you're organizing
         </h2>
 
