@@ -267,7 +267,7 @@ The page's central object. It's a stylized invite, not a working form.
 
 ### Subject-Line Correction (signature)
 
-The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through), then an accent arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen.
+The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through), then an accent arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen. Just below the rules, a 0.875rem muted line ("On the receiving end of one?") carries an underlined Redline Pink link that jumps to the reply, for sharers who came for it.
 
 ### Copy Card
 

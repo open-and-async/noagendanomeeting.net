@@ -69,6 +69,13 @@ describe("Page Content", () => {
     );
   });
 
+  // Sharers mostly came for the reply, so the top of the page links to it.
+  it("should link from the subject-line fix to the reply section", () => {
+    const link = document.querySelector('main a[href="#if-you-got-one"]');
+    expect(link).not.toBeNull();
+    expect(document.getElementById("if-you-got-one")?.closest("section")).not.toBeNull();
+  });
+
   it("should put the agenda template with the organizer advice", () => {
     const button = document.querySelector('main [data-copy-label="Template"]');
     expect(button?.closest("section")?.getAttribute("aria-labelledby")).toBe("if-youre-organizing");
