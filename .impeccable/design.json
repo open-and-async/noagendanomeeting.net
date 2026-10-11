@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T22:57:04.565275+00:00",
+  "title": "Design System: No Agenda, No Meeting",
+  "extensions": {
+    "colorMeta": {
+      "redline-pink": {
+        "role": "primary",
+        "displayName": "Redline Pink",
+        "tonalRamp": [
+          "oklch(15% 0.120 1)",
+          "oklch(25% 0.200 1)",
+          "oklch(35% 0.200 1)",
+          "oklch(45% 0.200 1)",
+          "oklch(55% 0.200 1)",
+          "oklch(65% 0.200 1)",
+          "oklch(80% 0.200 1)",
+          "oklch(95% 0.050 1)"
+        ]
+      },
+      "highlighter-lime": {
+        "role": "primary",
+        "displayName": "Highlighter Lime",
+        "tonalRamp": [
+          "oklch(15% 0.114 110)",
+          "oklch(25% 0.190 110)",
+          "oklch(35% 0.190 110)",
+          "oklch(45% 0.190 110)",
+          "oklch(55% 0.190 110)",
+          "oklch(65% 0.190 110)",
+          "oklch(80% 0.190 110)",
+          "oklch(95% 0.048 110)"
+        ]
+      },
+      "bright-redline-pink": {
+        "role": "secondary",
+        "displayName": "Bright Redline Pink",
+        "tonalRamp": [
+          "oklch(15% 0.102 355)",
+          "oklch(25% 0.170 355)",
+          "oklch(35% 0.170 355)",
+          "oklch(45% 0.170 355)",
+          "oklch(55% 0.170 355)",
+          "oklch(65% 0.170 355)",
+          "oklch(80% 0.170 355)",
+          "oklch(95% 0.043 355)"
+        ]
+      },
+      "ink-navy": {
+        "role": "neutral",
+        "displayName": "Ink Navy",
+        "tonalRamp": [
+          "oklch(15% 0.030 260)",
+          "oklch(25% 0.050 260)",
+          "oklch(35% 0.050 260)",
+          "oklch(45% 0.050 260)",
+          "oklch(55% 0.050 260)",
+          "oklch(65% 0.050 260)",
+          "oklch(80% 0.050 260)",
+          "oklch(95% 0.013 260)"
+        ]
+      },
+      "night-card": {
+        "role": "neutral",
+        "displayName": "Night Card",
+        "tonalRamp": [
+          "oklch(15% 0.030 262)",
+          "oklch(25% 0.050 262)",
+          "oklch(35% 0.050 262)",
+          "oklch(45% 0.050 262)",
+          "oklch(55% 0.050 262)",
+          "oklch(65% 0.050 262)",
+          "oklch(80% 0.050 262)",
+          "oklch(95% 0.013 262)"
+        ]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "tonalRamp": [
+          "oklch(15% 0.030 265)",
+          "oklch(25% 0.050 265)",
+          "oklch(35% 0.050 265)",
+          "oklch(45% 0.050 265)",
+          "oklch(55% 0.050 265)",
+          "oklch(65% 0.050 265)",
+          "oklch(80% 0.050 265)",
+          "oklch(95% 0.013 265)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(25% 0.000 0)",
+          "oklch(35% 0.000 0)",
+          "oklch(45% 0.000 0)",
+          "oklch(55% 0.000 0)",
+          "oklch(65% 0.000 0)",
+          "oklch(80% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "card-white": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(25% 0.000 0)",
+          "oklch(35% 0.000 0)",
+          "oklch(45% 0.000 0)",
+          "oklch(55% 0.000 0)",
+          "oklch(65% 0.000 0)",
+          "oklch(80% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.006 258)",
+          "oklch(25% 0.010 258)",
+          "oklch(35% 0.010 258)",
+          "oklch(45% 0.010 258)",
+          "oklch(55% 0.010 258)",
+          "oklch(65% 0.010 258)",
+          "oklch(80% 0.010 258)",
+          "oklch(95% 0.003 258)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Divider",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(25% 0.006 264)",
+          "oklch(35% 0.006 264)",
+          "oklch(45% 0.006 264)",
+          "oklch(55% 0.006 264)",
+          "oklch(65% 0.006 264)",
+          "oklch(80% 0.006 264)",
+          "oklch(95% 0.002 264)"
+        ]
+      },
+      "inner-rule": {
+        "role": "neutral",
+        "displayName": "Inner Rule",
+        "tonalRamp": [
+          "oklch(15% 0.002 264)",
+          "oklch(25% 0.003 264)",
+          "oklch(35% 0.003 264)",
+          "oklch(45% 0.003 264)",
+          "oklch(55% 0.003 264)",
+          "oklch(65% 0.003 264)",
+          "oklch(80% 0.003 264)",
+          "oklch(95% 0.001 264)"
+        ]
+      },
+      "muted-text": {
+        "role": "neutral",
+        "displayName": "Muted Text",
+        "tonalRamp": [
+          "oklch(15% 0.016 264)",
+          "oklch(25% 0.027 264)",
+          "oklch(35% 0.027 264)",
+          "oklch(45% 0.027 264)",
+          "oklch(55% 0.027 264)",
+          "oklch(65% 0.027 264)",
+          "oklch(80% 0.027 264)",
+          "oklch(95% 0.007 264)"
+        ]
+      },
+      "body-gray": {
+        "role": "neutral",
+        "displayName": "Body Gray",
+        "tonalRamp": [
+          "oklch(15% 0.020 260)",
+          "oklch(25% 0.034 260)",
+          "oklch(35% 0.034 260)",
+          "oklch(45% 0.034 260)",
+          "oklch(55% 0.034 260)",
+          "oklch(65% 0.034 260)",
+          "oklch(80% 0.034 260)",
+          "oklch(95% 0.009 260)"
+        ]
+      },
+      "blush-wash": {
+        "role": "neutral",
+        "displayName": "Blush Wash",
+        "tonalRamp": [
+          "oklch(15% 0.008 343)",
+          "oklch(25% 0.014 343)",
+          "oklch(35% 0.014 343)",
+          "oklch(45% 0.014 343)",
+          "oklch(55% 0.014 343)",
+          "oklch(65% 0.014 343)",
+          "oklch(80% 0.014 343)",
+          "oklch(95% 0.004 343)"
+        ]
+      },
+      "bad-red": {
+        "role": "semantic",
+        "displayName": "Bad Red",
+        "tonalRamp": [
+          "oklch(15% 0.120 27)",
+          "oklch(25% 0.200 27)",
+          "oklch(35% 0.200 27)",
+          "oklch(45% 0.200 27)",
+          "oklch(55% 0.200 27)",
+          "oklch(65% 0.200 27)",
+          "oklch(80% 0.200 27)",
+          "oklch(95% 0.050 27)"
+        ]
+      },
+      "bad-wash": {
+        "role": "semantic",
+        "displayName": "Bad Wash",
+        "tonalRamp": [
+          "oklch(15% 0.120 17)",
+          "oklch(25% 0.200 17)",
+          "oklch(35% 0.200 17)",
+          "oklch(45% 0.200 17)",
+          "oklch(55% 0.200 17)",
+          "oklch(65% 0.200 17)",
+          "oklch(80% 0.200 17)",
+          "oklch(95% 0.050 17)"
+        ]
+      },
+      "good-green": {
+        "role": "semantic",
+        "displayName": "Good Green",
+        "tonalRamp": [
+          "oklch(15% 0.090 150)",
+          "oklch(25% 0.150 150)",
+          "oklch(35% 0.150 150)",
+          "oklch(45% 0.150 150)",
+          "oklch(55% 0.150 150)",
+          "oklch(65% 0.150 150)",
+          "oklch(80% 0.150 150)",
+          "oklch(95% 0.037 150)"
+        ]
+      },
+      "good-wash": {
+        "role": "semantic",
+        "displayName": "Good Wash",
+        "tonalRamp": [
+          "oklch(15% 0.090 156)",
+          "oklch(25% 0.150 156)",
+          "oklch(35% 0.150 156)",
+          "oklch(45% 0.150 156)",
+          "oklch(55% 0.150 156)",
+          "oklch(65% 0.150 156)",
+          "oklch(80% 0.150 156)",
+          "oklch(95% 0.037 156)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title and the book name only; 1.875rem below 640px."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Opening paragraph; 1.125rem below 640px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, optionally led by a 22px icon."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Invite subject lines."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running prose in the 640px column."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Lists, callouts, reactions, copyable text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase invite header bands and card headings."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Share link."
+      },
+      "mono-eyebrow": {
+        "displayName": "Mono Eyebrow",
+        "purpose": "Book card eyebrow only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "resting-sheet",
+        "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "purpose": "Invite cards, copy cards, and the book card at rest."
+      },
+      {
+        "name": "lifted-promo",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "Book card on hover only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Color and border transitions on buttons."
+      },
+      {
+        "name": "promo-lift",
+        "value": "200ms; translateY(-1px), arrow translateX(2px)",
+        "purpose": "Book card hover, motion-safe only."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Copy Button",
+      "kind": "button",
+      "refersTo": "button-copy",
+      "description": "Quiet outlined action for copying the reply, template, or link.",
+      "html": "<button class=\"ds-btn-copy\" type=\"button\">Copy reply <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg></button>",
+      "css": ".ds-btn-copy{display:inline-flex;align-items:center;gap:6px;cursor:pointer;background:#fff;color:#be185d;border:1px solid oklch(87.2% 0.01 258.338);border-radius:6px;min-height:44px;padding:8px 16px;font:400 0.875rem/1.43 ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),border-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-copy:hover{background:oklch(97.1% 0.014 343.198);border-color:#be185d}.ds-btn-copy:focus-visible{outline:2px solid #be185d;outline-offset:2px}.ds-btn-copy svg{color:oklch(55.1% 0.027 264.364)}"
+    },
+    {
+      "name": "Share Button",
+      "kind": "button",
+      "refersTo": "button-copy",
+      "description": "Copy button variant with the host in mono.",
+      "html": "<button class=\"ds-btn-copy ds-btn-share\" type=\"button\">noagendanomeeting.net <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg></button>",
+      "css": ".ds-btn-copy{display:inline-flex;align-items:center;gap:6px;cursor:pointer;background:#fff;color:#be185d;border:1px solid oklch(87.2% 0.01 258.338);border-radius:6px;min-height:44px;padding:8px 16px;font:400 0.875rem/1.43 ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),border-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-copy:hover{background:oklch(97.1% 0.014 343.198);border-color:#be185d}.ds-btn-copy:focus-visible{outline:2px solid #be185d;outline-offset:2px}.ds-btn-copy svg{color:oklch(55.1% 0.027 264.364)}.ds-btn-share{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}"
+    },
+    {
+      "name": "Bad Invite",
+      "kind": "card",
+      "refersTo": "invite-header-bad",
+      "description": "Signature mock of an agenda-less invite.",
+      "html": "<div class=\"ds-invite-bad\"><div class=\"ds-invite-head\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 2v4\"/><path d=\"M16 2v4\"/><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\"/><path d=\"M3 10h18\"/></svg> Calendar Invite</div><div class=\"ds-invite-body\"><div class=\"ds-invite-subject\">Quick sync</div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">When</span><span>Tuesday, 2:00 – 2:30 PM</span></div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">Agenda</span><span class=\"ds-invite-none\">(none)</span></div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">Goals</span><span class=\"ds-invite-none\">(none)</span></div></div><p class=\"ds-invite-reaction\">Am I in trouble? Do I need to prepare?</p></div>",
+      "css": ".ds-invite-bad{max-width:320px;background:#fff;color:#102038;border:1px solid oklch(87.2% 0.01 258.338);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);font-family:ui-sans-serif,system-ui,sans-serif}.ds-invite-bad .ds-invite-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:oklch(97.1% 0.013 17.38);color:oklch(44.4% 0.177 26.899);border-bottom:2px solid oklch(80.8% 0.114 19.571);font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}.ds-invite-bad .ds-invite-body{padding:16px}.ds-invite-bad .ds-invite-subject{font-size:1.125rem;font-weight:700;margin-bottom:12px}.ds-invite-bad .ds-invite-field{display:flex;gap:8px;padding:4px 0;font-size:0.875rem}.ds-invite-bad .ds-invite-label{min-width:5.5rem;color:oklch(55.1% 0.027 264.364)}.ds-invite-bad .ds-invite-none{color:oklch(55.1% 0.027 264.364);font-style:italic}.ds-invite-bad .ds-invite-reaction{margin:0;padding:12px 16px;border-top:1px solid oklch(96.7% 0.003 264.542);font-size:0.95rem;font-style:italic;color:oklch(44.6% 0.03 256.802)}"
+    },
+    {
+      "name": "Good Invite",
+      "kind": "card",
+      "refersTo": "invite-header-good",
+      "description": "Signature mock of a well-written invite.",
+      "html": "<div class=\"ds-invite-good\"><div class=\"ds-invite-head\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 2v4\"/><path d=\"M16 2v4\"/><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\"/><path d=\"M3 10h18\"/></svg> Calendar Invite</div><div class=\"ds-invite-body\"><div class=\"ds-invite-subject\">Q3 launch: go/no-go decision</div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">When</span><span>Tuesday, 2:00 – 2:30 PM</span></div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">Agenda</span><span>Status · Open questions · Decision</span></div><div class=\"ds-invite-field\"><span class=\"ds-invite-label\">Read-ahead</span><span>Q3 launch status doc</span></div></div><p class=\"ds-invite-reaction\">Everyone arrives prepared.</p></div>",
+      "css": ".ds-invite-good{max-width:320px;background:#fff;color:#102038;border:1px solid oklch(87.2% 0.01 258.338);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);font-family:ui-sans-serif,system-ui,sans-serif}.ds-invite-good .ds-invite-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:oklch(98.2% 0.018 155.826);color:oklch(44.8% 0.119 151.328);border-bottom:2px solid oklch(87.1% 0.15 154.449);font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}.ds-invite-good .ds-invite-body{padding:16px}.ds-invite-good .ds-invite-subject{font-size:1.125rem;font-weight:700;margin-bottom:12px}.ds-invite-good .ds-invite-field{display:flex;gap:8px;padding:4px 0;font-size:0.875rem}.ds-invite-good .ds-invite-label{min-width:5.5rem;color:oklch(55.1% 0.027 264.364)}.ds-invite-good .ds-invite-none{color:oklch(55.1% 0.027 264.364);font-style:italic}.ds-invite-good .ds-invite-reaction{margin:0;padding:12px 16px;border-top:1px solid oklch(96.7% 0.003 264.542);font-size:0.95rem;font-style:italic;color:oklch(44.6% 0.03 256.802)}"
+    },
+    {
+      "name": "Copy Card",
+      "kind": "card",
+      "refersTo": "copy-card",
+      "description": "Heading, copyable text, and a copy button.",
+      "html": "<div class=\"ds-copy-card\"><h3>What to send back</h3><blockquote>Happy to join once there&#39;s an agenda and a desired outcome.</blockquote><button class=\"ds-btn-copy\" type=\"button\">Copy reply <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg></button></div>",
+      "css": ".ds-copy-card{max-width:420px;background:#fff;border:1px solid oklch(87.2% 0.01 258.338);border-radius:8px;padding:16px 20px;box-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);font-family:ui-sans-serif,system-ui,sans-serif}.ds-copy-card h3{margin:0 0 8px;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:oklch(55.1% 0.027 264.364)}.ds-copy-card blockquote{margin:0 0 12px;font-size:0.95rem;color:oklch(37.3% 0.034 259.733)}.ds-btn-copy{display:inline-flex;align-items:center;gap:6px;cursor:pointer;background:#fff;color:#be185d;border:1px solid oklch(87.2% 0.01 258.338);border-radius:6px;min-height:44px;padding:8px 16px;font:400 0.875rem/1.43 ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),border-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-copy:hover{background:oklch(97.1% 0.014 343.198);border-color:#be185d}.ds-btn-copy:focus-visible{outline:2px solid #be185d;outline-offset:2px}.ds-btn-copy svg{color:oklch(55.1% 0.027 264.364)}"
+    },
+    {
+      "name": "Callout",
+      "kind": "custom",
+      "refersTo": "callout",
+      "description": "Blush Wash panel for the one key claim.",
+      "html": "<div class=\"ds-callout\">Knowledge workers spend <strong>one to two full days a week in meetings</strong>.</div>",
+      "css": ".ds-callout{max-width:480px;background:oklch(97.1% 0.014 343.198);border-radius:8px;padding:16px 20px;font:400 0.95rem/1.625 ui-sans-serif,system-ui,sans-serif;color:#102038}.ds-callout strong{color:#102038}"
+    },
+    {
+      "name": "Arrow List",
+      "kind": "custom",
+      "description": "Redline Pink hanging arrows.",
+      "html": "<ul class=\"ds-arrow-list\"><li>People show up unprepared.</li><li>Without clear goals, meetings drift.</li></ul>",
+      "css": ".ds-arrow-list{list-style:none;margin:16px 0;padding:0;font:400 0.95rem/1.625 ui-sans-serif,system-ui,sans-serif;color:#102038}.ds-arrow-list li{position:relative;padding:6px 0 6px 28px}.ds-arrow-list li::before{content:\"→\";position:absolute;left:0;font-weight:700;color:#be185d}"
+    },
+    {
+      "name": "Book CTA Button",
+      "kind": "button",
+      "refersTo": "book-promo-button",
+      "description": "The only filled button: lime→pink gradient on the navy book card.",
+      "html": "<div class=\"ds-book\"><a class=\"ds-book-cta\" href=\"#\">Get the book <span aria-hidden=\"true\">→</span></a></div>",
+      "css": ".ds-book{background:#102038;border:1px solid #2e3e62;border-radius:12px;padding:32px 24px}.ds-book-cta{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(to right,#d0d820,#f070a8);color:#102038;border-radius:8px;padding:10px 20px;font:600 0.875rem/1.43 ui-sans-serif,system-ui,sans-serif;text-decoration:none}.ds-book-cta:hover{filter:brightness(1.05)}.ds-book-cta:hover span{transform:translateX(2px)}.ds-book-cta span{transition:transform 150ms}.ds-book-cta:focus-visible{outline:2px solid #d0d820;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Well-Written Invite",
+    "overview": "The page should feel the way a good calendar invite reads: calm, organized, and clear about what it wants. It sits on near-white paper in a single narrow column, with the main argument carried by two mock invites, one bad and one good. Everything else stays out of their way. Color shows up for only three reasons: to mark bad vs. good, to point at something you can act on (copy, share, follow a link), and in the one promo object for the book.\n\nThe page is low-density and reads top to bottom in a couple of minutes. The serif headline gives it a little editorial authority, the system sans keeps the body plain, and the developer humor lives in the copy rather than in decoration. The reader is often an organizer who's just been sent this link, so nothing visual should feel like a scolding: no alarm-red banners, no shouting type, no mockery in the art.",
+    "keyCharacteristics": [
+      "One 640px reading column that breaks out to a two-up grid only for the invite comparison.",
+      "Flat, quiet paper surfaces with hairline borders and the faintest shadow.",
+      "Redline Pink as the single action-and-annotation accent in light mode, swapped for Highlighter Lime and a brighter pink in dark mode.",
+      "Red and green appear only as the bad and good invite signals.",
+      "The Open & Async book card is the one deliberately bold, lifted object, and it's fixed in the book's own colors."
+    ],
+    "rules": [
+      {
+        "name": "The One Pen Rule",
+        "body": "Redline Pink (or its dark-mode swap) is the only accent outside the book card. It marks either a correction (punctuation, the struck-through \"Quick sync\", arrows) or an action (copy, share). If something isn't one of those, it stays neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signals Stay in the Mock Rule",
+        "body": "Red and green belong to the invite comparison: the two section icons and the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red underline on \"Quick sync\" in the opening paragraph, which points at the bad invite before the reader reaches it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Book Keeps Its Own Colors Rule",
+        "body": "The book card uses Ink Navy, Highlighter Lime, and Bright Redline Pink as fixed values, not theme tokens, so it matches open-and-async.com in both modes. Don't retheme it to fit the page, and don't spread its gradient to the rest of the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Serif Rule",
+        "body": "DM Serif Display appears only in the page title and the book's name. Section headings stay sans, and adding the serif anywhere else dilutes the title.",
+        "section": "typography"
+      },
+      {
+        "name": "The Document, Not Poster Rule",
+        "body": "Body text never goes above 1.25rem, and nothing but the title uses display sizes. The argument wins on clarity, not volume.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "Content surfaces stay at the resting sheet. Lift is reserved for the book card's hover, the one thing on the page that's an invitation rather than an argument.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep content in the 640px column, and break out to the 960px two-up grid only for side-by-side comparisons.",
+      "**Do** use Redline Pink in light mode and Highlighter Lime or Bright Redline Pink in dark mode for every accent, swapped through the `accent` and `accent-alt` theme tokens rather than hard-coded.",
+      "**Do** keep text contrast at or above WCAG AA in both modes. The accent swap exists because the brand lime and pink fail on Paper.",
+      "**Do** separate content surfaces with tone and hairlines, using at most the resting-sheet shadow.",
+      "**Do** style with Tailwind utilities and theme tokens. The hash-based CSP rejects `style=\"…\"` attributes.",
+      "**Do** mark icons that sit beside text `aria-hidden`, and pair every copy action with a screen-reader status message."
+    ],
+    "donts": [
+      "**Don't** use red or green outside the bad and good invite mocks.",
+      "**Don't** use DM Serif Display for anything but the page title and the book's name.",
+      "**Don't** retheme the book card, or spread its gradient, commit-graph motif, or navy surface into the rest of the page.",
+      "**Don't** add filled buttons other than the book CTA. Page actions stay as quiet outlined buttons.",
+      "**Don't** add lift, deeper shadows, or hover motion to content cards. Lift belongs to the book card.",
+      "**Don't** hard-code one-off hex values. Use a token from the palette.",
+      "**Don't** put a thick colored border on one side of a card, callout, or list item."
+    ]
+  }
+}
