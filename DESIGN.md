@@ -18,7 +18,6 @@ colors:
   blush-wash: "oklch(97.1% 0.014 343.198)"
   bad-red: "oklch(57.7% 0.245 27.325)"
   bad-wash: "oklch(97.1% 0.013 17.38)"
-  good-green: "oklch(52.7% 0.154 150.069)"
   good-wash: "oklch(98.2% 0.018 155.826)"
 typography:
   display:
@@ -191,8 +190,9 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 ### Semantic (invite mocks only)
 
-- **Bad Red** (`bad-red`) on **Bad Wash** (`bad-wash`): The bad invite's header band, and the wavy underline on "Quick sync" in the lede. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
-- **Good Green** (`good-green`) on **Good Wash** (`good-wash`): The good invite's header band, mirrored in dark mode with green-950 and green-300.
+- **Bad Red** (`bad-red`): The wavy underline on "Quick sync" in the lede (red-400 in dark mode).
+- **Bad Wash** (`bad-wash`): The bad invite's header band, with red-800 text over a red-300 rule. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
+- **Good Wash** (`good-wash`): The good invite's header band, with green-800 text over a green-300 rule, mirrored in dark mode with green-950 and green-300.
 
 ### Named Rules
 
