@@ -32,7 +32,7 @@ import { homeGraph } from "../jsonld";
       >
         Imagine getting a calendar invite that just says
         <em
-          class="not-italic underline decoration-red-600 underline-offset-[3px] dark:decoration-red-400"
+          class="not-italic underline decoration-red-600 decoration-wavy underline-offset-4 dark:decoration-red-400"
           >"Quick sync"</em
         >
         with zero context&hellip; and having no idea what it's about. We've all gotten one. Most of
@@ -47,12 +47,12 @@ import { homeGraph } from "../jsonld";
             class="text-xs font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400"
             >Subject</span
           >
-          <del class="decoration-accent text-gray-500 decoration-2 dark:text-gray-400"
+          <del class="decoration-accent-alt text-gray-500 decoration-2 dark:text-gray-400"
             ><span class="sr-only">from </span>Quick sync</del
           >
           <!-- Arrow and new subject wrap as one unit, so the arrow never dangles. -->
           <span class="inline-flex items-center gap-2">
-            <ArrowRight aria-hidden="true" size={16} class="text-accent shrink-0" />
+            <ArrowRight aria-hidden="true" size={16} class="text-accent-alt shrink-0" />
             <ins class="font-semibold no-underline"
               ><span class="sr-only">to </span>Q3 launch: go/no-go decision</ins
             >

@@ -169,11 +169,11 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 ### Primary
 
 - **Redline Pink** (`redline-pink`): The light-mode accent, like an editor's correction pen. It colors the title punctuation (the comma and period in "No Agenda, No Meeting."), the strike-through and arrow in the opening subject-line correction, the list arrows, the copy and share button labels, and the agenda template's header band. It's chosen for contrast (5.8:1 on paper), because the real brand pink and lime are too light to read as text on near-white.
-- **Highlighter Lime** (`highlighter-lime`): The dark-mode stand-in for Redline Pink on the title punctuation (10.5:1 on Ink Navy). In both modes it's the commit-graph line and dots on the book card and the start of the book's gradient.
+- **Highlighter Lime** (`highlighter-lime`): The dark-mode stand-in for Redline Pink on the title punctuation only (10.5:1 on Ink Navy). The subject-line correction stays pink in dark mode, because a lime strike-through reads as "approved" rather than as an editor's mark. In both modes it's the commit-graph line and dots on the book card and the start of the book's gradient.
 
 ### Secondary
 
-- **Bright Redline Pink** (`bright-redline-pink`): The dark-mode stand-in for Redline Pink on arrows, links, and buttons (5.9:1 on Ink Navy). It's also the end of the book's lime-to-pink gradient.
+- **Bright Redline Pink** (`bright-redline-pink`): The dark-mode stand-in for Redline Pink on arrows (including the subject-line correction's strike-through and arrow), links, and buttons (5.9:1 on Ink Navy). It's also the end of the book's lime-to-pink gradient.
 
 ### Neutral
 
@@ -198,7 +198,7 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 **The One Pen Rule.** Redline Pink (or its dark-mode swap) is the only accent outside the book card. It marks either a correction (punctuation, the struck-through "Quick sync", arrows) or an action (copy, share). If something isn't one of those, it stays neutral.
 
-**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two section icons and the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it.
+**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two section icons and the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red wavy underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it. It's wavy, like a spellcheck squiggle, so it reads as a flagged mistake and never as a link.
 
 **The Book Keeps Its Own Colors Rule.** The book card uses Ink Navy, Highlighter Lime, and Bright Redline Pink as fixed values, not theme tokens, so it matches open-and-async.com in both modes. Don't retheme it to fit the page, and don't spread its gradient to the rest of the page.
 
@@ -267,7 +267,7 @@ The page's central object. It's a stylized invite, not a working form.
 
 ### Subject-Line Correction (signature)
 
-The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through), then an accent arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen. Just below the rules, a 0.875rem muted line ("On the receiving end of one?") carries an underlined Redline Pink link that jumps to the reply, for sharers who came for it.
+The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through, Bright Redline Pink in dark mode, via the `accent-alt` token), then a matching pink arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen. Just below the rules, a 0.875rem muted line ("On the receiving end of one?") carries an underlined Redline Pink link that jumps to the reply, for sharers who came for it.
 
 ### Copy Card
 
