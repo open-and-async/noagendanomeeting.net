@@ -11,6 +11,10 @@ preview_urls = false
 # With preview_urls off, PR builds pass but publish no reachable URL.
 previews = {}
 
+# Bind the apex here rather than in the dashboard, so every deploy (Workers
+# Builds or `npm run deploy`) asserts it and the binding lives with the code.
+routes = [{ pattern = "noagendanomeeting.net", custom_domain = true }]
+
 [build]
 command = "npm install && npm run build"
 
