@@ -42,7 +42,7 @@
     "@types/node": "^25.5.2",
     "@vitest/coverage-v8": "^5.0.0",
     "astro": "7.3.5",
-    "html-validate": "11.16.1",
+    "html-validate": "11.16.2",
     "jsdom": "^30.0.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^1.0.0",
