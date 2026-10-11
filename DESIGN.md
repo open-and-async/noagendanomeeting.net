@@ -281,7 +281,7 @@ The page's opening move and its one use of the correction pen. Between hairline 
 
 - **Shape:** Gently rounded (6px), white surface, hairline border, 8px × 16px padding and a 44px minimum height for thumbs, 0.875rem text with a trailing 14px muted icon.
 - **Copy / share:** Redline Pink label text. The share variant sets the host in mono and, on touch screens where it opens the share sheet, swaps the copy icon and screen-reader verb for "share".
-- **Feedback:** "Copied!" replaces the label for 2 seconds while the button holds its width.
+- **Feedback:** "Copied!" replaces the label for 2 seconds while the button holds its width. If copying fails, the button says "Copy failed" and a 0.875rem muted hint appears under it and stays until a later copy succeeds: copy cards select their text and say so, and the share box shows the link in a mono, select-all span. The hint is `aria-hidden`, since the status region already announces the failure and the text.
 - **Hover:** The surface shifts to Blush Wash and the border to Redline Pink over 150ms. In dark mode the surface is Ink Navy and goes to Night Card on hover.
 - **Book CTA:** The one filled button: an 8px pill with the lime-to-pink gradient, Ink Navy semibold text, and an arrow that nudges 2px right on hover (motion-safe only). In print it falls back to a solid navy button.
 

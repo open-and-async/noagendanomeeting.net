@@ -276,6 +276,11 @@ import { homeGraph } from "../jsonld";
         />
       </button>
       <span role="status" class="sr-only" data-copy-status></span>
+      <!-- Shown only if copying fails; the status region covers screen readers. -->
+      <p data-copy-hint hidden aria-hidden="true" class="mt-2">
+        Couldn't copy automatically. The link is
+        <span class="font-mono select-all">{SHARE_URL}</span>
+      </p>
     </div>
 
     <BookCta />

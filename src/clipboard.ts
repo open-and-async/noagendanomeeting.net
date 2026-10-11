@@ -1,11 +1,20 @@
 export const RESET_DELAY_MS = 2000;
 
+// Visible recovery for a failed copy. `hint` is a hidden element explaining
+// what to do instead; `source` is the element holding the text, which gets
+// selected so copying by hand is one keystroke away.
+export interface CopyFallback {
+  hint?: HTMLElement | null;
+  source?: HTMLElement | null;
+}
+
 // `label` names what was copied in status messages ("Link copied to clipboard.").
 export function createCopyHandler(
   button: HTMLButtonElement,
   text: string,
   status?: HTMLElement | null,
   label = "Link",
+  { hint, source }: CopyFallback = {},
 ): () => Promise<void> {
   const originalHTML = button.innerHTML;
   let resetTimer: ReturnType<typeof setTimeout> | undefined;
@@ -22,6 +31,11 @@ export function createCopyHandler(
         : `Couldn't copy automatically. The ${label.toLowerCase()} is: ${text}`;
     }
 
+    // The hint stays up after the button resets: two seconds is too short to
+    // read it and act on it. A later successful copy hides it again.
+    if (hint) hint.hidden = copied;
+    if (!copied && source) selectContents(source);
+
     clearTimeout(resetTimer);
     resetTimer = setTimeout(() => {
       button.innerHTML = originalHTML;
@@ -29,6 +43,13 @@ export function createCopyHandler(
       if (status) status.textContent = "";
     }, RESET_DELAY_MS);
   };
+}
+
+function selectContents(element: HTMLElement): void {
+  const selection = window.getSelection();
+  if (!selection) return;
+  selection.removeAllRanges();
+  selection.selectAllChildren(element);
 }
 
 async function copyText(text: string): Promise<boolean> {
@@ -83,13 +104,18 @@ export function createShareHandler(
 
 // Buttons with data-share try the native share sheet first.
 // Each button announces through the [data-copy-status] region that shares its
-// parent, so several copy buttons can live on one page.
+// parent, so several copy buttons can live on one page. A [data-copy-hint] and
+// [data-copy-source] in the same parent power the visible failure fallback.
 export function initClipboard(): void {
   document.querySelectorAll<HTMLButtonElement>("[data-copy-text]").forEach((button) => {
     const text = button.getAttribute("data-copy-text") ?? "";
     const label = button.getAttribute("data-copy-label") ?? undefined;
-    const status = button.parentElement?.querySelector<HTMLElement>("[data-copy-status]");
-    const copy = createCopyHandler(button, text, status, label);
+    const scope = button.parentElement;
+    const status = scope?.querySelector<HTMLElement>("[data-copy-status]");
+    const copy = createCopyHandler(button, text, status, label, {
+      hint: scope?.querySelector<HTMLElement>("[data-copy-hint]"),
+      source: scope?.querySelector<HTMLElement>("[data-copy-source]"),
+    });
     const handler = button.hasAttribute("data-share") ? createShareHandler(text, copy) : copy;
     button.addEventListener("click", handler);
   });
