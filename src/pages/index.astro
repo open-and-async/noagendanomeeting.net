@@ -4,7 +4,7 @@ import Invite from "../components/Invite.astro";
 import InviteField from "../components/InviteField.astro";
 import CopyCard from "../components/CopyCard.astro";
 import BookCta from "../components/BookCta.astro";
-import { ArrowRight, CircleCheck, CircleX, Copy, Paperclip, Share } from "@lucide/astro";
+import { ArrowRight, Copy, Paperclip, Share } from "@lucide/astro";
 import {
   AGENDA_TEMPLATE,
   DECLINE_REPLY,
@@ -32,7 +32,7 @@ import { homeGraph } from "../jsonld";
       >
         Imagine getting a calendar invite that just says
         <em
-          class="not-italic underline decoration-red-600 underline-offset-[3px] dark:decoration-red-400"
+          class="not-italic underline decoration-red-600 decoration-wavy underline-offset-4 dark:decoration-red-400"
           >"Quick sync"</em
         >
         with zero context&hellip; and having no idea what it's about. We've all gotten one. Most of
@@ -47,12 +47,12 @@ import { homeGraph } from "../jsonld";
             class="text-xs font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400"
             >Subject</span
           >
-          <del class="decoration-accent text-gray-500 decoration-2 dark:text-gray-400"
+          <del class="decoration-accent-alt text-gray-500 decoration-2 dark:text-gray-400"
             ><span class="sr-only">from </span>Quick sync</del
           >
           <!-- Arrow and new subject wrap as one unit, so the arrow never dangles. -->
           <span class="inline-flex items-center gap-2">
-            <ArrowRight aria-hidden="true" size={16} class="text-accent shrink-0" />
+            <ArrowRight aria-hidden="true" size={16} class="text-accent-alt shrink-0" />
             <ins class="font-semibold no-underline"
               ><span class="sr-only">to </span>Q3 launch: go/no-go decision</ins
             >
@@ -62,19 +62,26 @@ import { homeGraph } from "../jsonld";
           Name the decision, list what you'll cover, and attach the read-ahead&mdash;that's it.
         </p>
       </div>
+      <!-- Sharers usually came for the reply, which sits further down. -->
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        On the receiving end of one?
+        <a
+          href="#if-you-got-one"
+          class="text-accent-alt hover:decoration-accent-alt underline decoration-gray-300 underline-offset-2 dark:decoration-gray-600"
+          >Jump to a polite reply</a
+        >
+      </p>
 
       <!-- On wide screens the two invites sit side by side, breaking out of the
-           text column, since the contrast between them is the page's argument. -->
+           text column, since the contrast between them is the page's argument.
+           Each section spans three subgrid rows (heading, invite, paragraph), so
+           the headings, cards and paragraphs line up across the two columns. -->
       <div
-        class="lg:relative lg:left-1/2 lg:grid lg:w-[60rem] lg:-translate-x-1/2 lg:grid-cols-2 lg:gap-10"
+        class="lg:relative lg:left-1/2 lg:grid lg:w-[60rem] lg:-translate-x-1/2 lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-x-10"
       >
-        <section aria-labelledby="before">
-          <h2
-            id="before"
-            class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-          >
-            <CircleX aria-hidden="true" size={22} class="text-red-600 dark:text-red-400" />
-            <span>Before: the mystery invite</span>
+        <section aria-labelledby="before" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
+          <h2 id="before" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
+            Before: the mystery invite
           </h2>
 
           <Invite
@@ -82,7 +89,7 @@ import { homeGraph } from "../jsonld";
             subject="Quick sync"
             reaction="Am I in trouble? Do I need to prepare? What is this even about? 😰"
           >
-            <InviteField label="When" value="Tuesday, 2:00 – 2:30 PM" />
+            <InviteField label="When" value={"Tuesday, 2:00 – 2:30\u00a0PM"} />
             <InviteField label="Goal" />
             <InviteField label="Agenda" />
             <InviteField label="Read-ahead" />
@@ -96,13 +103,9 @@ import { homeGraph } from "../jsonld";
           </p>
         </section>
 
-        <section aria-labelledby="after">
-          <h2
-            id="after"
-            class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-          >
-            <CircleCheck aria-hidden="true" size={22} class="text-green-700 dark:text-green-400" />
-            <span>After: same meeting, with an agenda</span>
+        <section aria-labelledby="after" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
+          <h2 id="after" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
+            After: same meeting, with an agenda
           </h2>
 
           <Invite
@@ -110,7 +113,7 @@ import { homeGraph } from "../jsonld";
             subject="Q3 launch: go/no-go decision"
             reaction="Everyone arrives prepared. The meeting is focused. Better decisions get made. ✨"
           >
-            <InviteField label="When" value="Tuesday, 2:00 – 2:30 PM" />
+            <InviteField label="When" value={"Tuesday, 2:00 – 2:30\u00a0PM"} />
             <InviteField label="Goal" value="Decide whether the Q3 beta ships" />
             <div class="dark:border-brand-600 mt-3 border-t border-gray-100 pt-3">
               <div
@@ -139,10 +142,7 @@ import { homeGraph } from "../jsonld";
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
       <section aria-labelledby="why-this-matters">
-        <h2
-          id="why-this-matters"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
+        <h2 id="why-this-matters" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
           Why this matters
         </h2>
 
@@ -173,22 +173,48 @@ import { homeGraph } from "../jsonld";
 
       <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
 
+      <section aria-labelledby="if-you-got-one">
+        <h2 id="if-you-got-one" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
+          When you're on the receiving end
+        </h2>
+
+        <p class="mb-4 leading-relaxed">
+          Everyone gets a mystery invite now and then.
+          <strong>No agenda? Ask for one, or decline politely.</strong> It's a reasonable request,
+          and it often gets you a better meeting.
+        </p>
+
+        <CopyCard heading="What to send back" text={DECLINE_REPLY} label="Reply" />
+      </section>
+
+      <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
+
       <section aria-labelledby="if-youre-organizing">
-        <h2
-          id="if-youre-organizing"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
+        <h2 id="if-youre-organizing" class="mt-10 mb-4 text-xl font-semibold tracking-tight">
           If you're organizing
         </h2>
 
-        <p class="text-ink mt-6 mb-4 text-lg leading-snug font-medium dark:text-gray-200">
-          Before you schedule a meeting, ask: "Can this start as a document instead?"
+        <p class="mb-4 leading-relaxed">Before you schedule a meeting, ask yourself:</p>
+
+        <!-- The page's one pull statement: its thesis as the question to ask.
+             Set off by hairlines, like the subject-line correction, rather than
+             by color or the serif. -->
+        <p
+          class="text-ink dark:border-brand-600 my-6 border-y border-gray-200 py-5 text-2xl leading-snug font-semibold tracking-tight text-balance dark:text-white"
+        >
+          Can this start as a document instead?
         </p>
 
         <p class="mb-4 leading-relaxed">
           You'd be surprised how often it can. A few minutes of writing often replaces waiting days
           for mutual availability and a 30-minute meeting. If you've done the writing and still need
           to meet, you've just created the agenda.
+        </p>
+
+        <p class="mb-4 leading-relaxed">
+          Writing scales; meetings don't. A well-written document can reach hundreds of people at
+          their convenience without interrupting anyone's flow. A meeting reaches only the people in
+          the room, only at that exact moment.
         </p>
 
         <ul class="arrow-list">
@@ -218,30 +244,6 @@ import { homeGraph } from "../jsonld";
           variant="invite"
         />
       </section>
-
-      <hr class="dark:border-brand-600 my-10 border-t border-gray-200" />
-
-      <section aria-labelledby="if-you-got-one">
-        <h2
-          id="if-you-got-one"
-          class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
-        >
-          If you got an invite like this
-        </h2>
-
-        <p class="mb-4 leading-relaxed">
-          <strong>No agenda? Ask for one, or decline politely.</strong> It's a reasonable request,
-          and it often gets you a better meeting.
-        </p>
-
-        <CopyCard heading="What to send back" text={DECLINE_REPLY} label="Reply" />
-      </section>
-
-      <p class="text-ink mt-10 text-lg leading-snug font-medium dark:text-gray-200">
-        Writing scales; meetings don't. A well-written document can reach hundreds of people at
-        their convenience without interrupting anyone's flow. A meeting reaches only the people in
-        the room, only at that exact moment.
-      </p>
     </article>
 
     <hr class="dark:border-brand-600 mt-10 border-t border-gray-200" />
@@ -274,6 +276,11 @@ import { homeGraph } from "../jsonld";
         />
       </button>
       <span role="status" class="sr-only" data-copy-status></span>
+      <!-- Shown only if copying fails; the status region covers screen readers. -->
+      <p data-copy-hint hidden aria-hidden="true" class="mt-2">
+        Couldn't copy automatically. Here's the link to copy:
+        <span class="font-mono select-all">{SHARE_URL}</span>
+      </p>
     </div>
 
     <BookCta />

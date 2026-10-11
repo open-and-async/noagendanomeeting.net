@@ -146,6 +146,25 @@ describe("createCopyHandler", () => {
     expect(button.textContent).toBe("Copied!");
     expect(navigator.clipboard.writeText).toHaveBeenCalledTimes(2);
   });
+
+  it("should keep the failure hint up after the reset and hide it on a later success", async () => {
+    vi.useFakeTimers();
+    const writeText = vi.fn().mockRejectedValue(new Error("Not allowed"));
+    Object.assign(navigator, { clipboard: { writeText } });
+    document.execCommand = vi.fn().mockReturnValue(false);
+    const hint = document.createElement("p");
+    hint.hidden = true;
+    const handler = createCopyHandler(button, "Happy to join", null, "Reply", { hint });
+
+    await handler();
+    vi.advanceTimersByTime(RESET_DELAY_MS);
+    expect(hint.hidden).toBe(false);
+
+    writeText.mockResolvedValue(undefined);
+    await handler();
+    expect(hint.hidden).toBe(true);
+    vi.useRealTimers();
+  });
 });
 
 describe("initClipboard", () => {
@@ -221,6 +240,29 @@ describe("initClipboard", () => {
     reply.button.click();
     await vi.waitFor(() => expect(reply.status.textContent).toBe("Reply copied to clipboard."));
     expect(link.status.textContent).toBe("");
+  });
+
+  it("should show the visible hint and select the source text when copying fails", async () => {
+    Object.assign(navigator, {
+      clipboard: { writeText: vi.fn().mockRejectedValue(new Error("Not allowed")) },
+    });
+    document.execCommand = vi.fn().mockReturnValue(false);
+    const group = document.createElement("div");
+    const source = document.createElement("blockquote");
+    source.textContent = "Happy to join";
+    source.setAttribute("data-copy-source", "");
+    const button = document.createElement("button");
+    button.setAttribute("data-copy-text", "Happy to join");
+    const hint = document.createElement("p");
+    hint.setAttribute("data-copy-hint", "");
+    hint.hidden = true;
+    group.append(source, button, hint);
+    document.body.appendChild(group);
+
+    initClipboard();
+    button.click();
+    await vi.waitFor(() => expect(hint.hidden).toBe(false));
+    expect(window.getSelection()?.toString()).toBe("Happy to join");
   });
 
   it("should use the data-copy-text attribute value as the copied text", () => {

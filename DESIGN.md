@@ -18,7 +18,6 @@ colors:
   blush-wash: "oklch(97.1% 0.014 343.198)"
   bad-red: "oklch(57.7% 0.245 27.325)"
   bad-wash: "oklch(97.1% 0.013 17.38)"
-  good-green: "oklch(52.7% 0.154 150.069)"
   good-wash: "oklch(98.2% 0.018 155.826)"
 typography:
   display:
@@ -32,6 +31,12 @@ typography:
     fontSize: "1.25rem"
     fontWeight: 500
     lineHeight: 1.5
+  pull:
+    fontFamily: "ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.5rem"
+    fontWeight: 600
+    lineHeight: 1.375
+    letterSpacing: "-0.025em"
   headline:
     fontFamily: "ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.25rem"
@@ -163,11 +168,11 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 ### Primary
 
 - **Redline Pink** (`redline-pink`): The light-mode accent, like an editor's correction pen. It colors the title punctuation (the comma and period in "No Agenda, No Meeting."), the strike-through and arrow in the opening subject-line correction, the list arrows, the copy and share button labels, and the agenda template's header band. It's chosen for contrast (5.8:1 on paper), because the real brand pink and lime are too light to read as text on near-white.
-- **Highlighter Lime** (`highlighter-lime`): The dark-mode stand-in for Redline Pink on the title punctuation (10.5:1 on Ink Navy). In both modes it's the commit-graph line and dots on the book card and the start of the book's gradient.
+- **Highlighter Lime** (`highlighter-lime`): The dark-mode stand-in for Redline Pink on the title punctuation only (10.5:1 on Ink Navy). The subject-line correction stays pink in dark mode, because a lime strike-through reads as "approved" rather than as an editor's mark. In both modes it's the commit-graph line and dots on the book card and the start of the book's gradient.
 
 ### Secondary
 
-- **Bright Redline Pink** (`bright-redline-pink`): The dark-mode stand-in for Redline Pink on arrows, links, and buttons (5.9:1 on Ink Navy). It's also the end of the book's lime-to-pink gradient.
+- **Bright Redline Pink** (`bright-redline-pink`): The dark-mode stand-in for Redline Pink on arrows (including the subject-line correction's strike-through and arrow), links, and buttons (5.9:1 on Ink Navy). It's also the end of the book's lime-to-pink gradient.
 
 ### Neutral
 
@@ -185,14 +190,15 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 ### Semantic (invite mocks only)
 
-- **Bad Red** (`bad-red`) on **Bad Wash** (`bad-wash`): The "Don't do this" icon and the bad invite's header band. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
-- **Good Green** (`good-green`) on **Good Wash** (`good-wash`): The "Try this instead" icon and the good invite's header band, mirrored in dark mode with green-950 and green-300.
+- **Bad Red** (`bad-red`): The wavy underline on "Quick sync" in the lede (red-400 in dark mode).
+- **Bad Wash** (`bad-wash`): The bad invite's header band, with red-800 text over a red-300 rule. The dark-mode header uses deep red tints (red-950 surface, red-300 text).
+- **Good Wash** (`good-wash`): The good invite's header band, with green-800 text over a green-300 rule, mirrored in dark mode with green-950 and green-300.
 
 ### Named Rules
 
 **The One Pen Rule.** Redline Pink (or its dark-mode swap) is the only accent outside the book card. It marks either a correction (punctuation, the struck-through "Quick sync", arrows) or an action (copy, share). If something isn't one of those, it stays neutral.
 
-**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two section icons and the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it.
+**The Signals Stay in the Mock Rule.** Red and green belong to the invite comparison: the two header bands. They never color body copy, buttons, or page chrome, because a red page reads as a scolding to the organizer we're trying to persuade. The one use outside the mocks is the bad-red wavy underline on "Quick sync" in the opening paragraph, which points at the bad invite before the reader reaches it. It's wavy, like a spellcheck squiggle, so it reads as a flagged mistake and never as a link.
 
 **The Book Keeps Its Own Colors Rule.** The book card uses Ink Navy, Highlighter Lime, and Bright Redline Pink as fixed values, not theme tokens, so it matches open-and-async.com in both modes. Don't retheme it to fit the page, and don't spread its gradient to the rest of the page.
 
@@ -208,7 +214,8 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 - **Display** (400, 2.5rem from 640px up and 1.875rem below it, line-height 1.1, tight tracking): The page title only, plus "Open & Async" on the book card.
 - **Lede** (500, 1.125rem with line-height 1.5, rising to 1.25rem at 640px): The opening "Imagine getting a calendar invite…" paragraph.
-- **Headline** (600, 1.25rem, tight tracking): Section headings ("Don't do this", "Why this matters"), sometimes led by a 22px icon.
+- **Pull** (600, 1.5rem, tight tracking, balanced): The one pull statement, "Can this start as a document instead?"
+- **Headline** (600, 1.25rem, tight tracking): Section headings ("Before: the mystery invite", "Why this matters"), always plain text. No heading carries an icon; the bad and good signal lives in the invite header bands and the "Before:"/"After:" wording, so every h2 looks the same.
 - **Title** (700, 1.125rem): The subject line inside an invite card.
 - **Body** (400, 1rem, line-height 1.625): Running prose, held to a 640px column of roughly 70 characters.
 - **Body Small** (400, 0.95rem): List items, callouts, invite reactions, and copyable text.
@@ -220,13 +227,13 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 **The Single Serif Rule.** DM Serif Display appears only in the page title and the book's name. Section headings stay sans, and adding the serif anywhere else dilutes the title.
 
-**The Document, Not Poster Rule.** Body text never goes above 1.25rem, and nothing but the title uses display sizes. The argument wins on clarity, not volume.
+**The Document, Not Poster Rule.** Body text never goes above 1.25rem, and nothing but the title uses display sizes. The one exception is the single pull statement at 1.5rem, which is the thesis, not body copy. The argument wins on clarity, not volume.
 
 ## Layout
 
 The page is a single centered column (`column`, 640px) with a 16px side gutter (`gutter`) that widens to 24px (`gutter-sm`) at 640px. Top padding goes from 32px to 48px at the same breakpoint.
 
-The one exception is the invite comparison. At 1024px and up it breaks out of the column into a 960px (`breakout`) two-column grid with a 40px gap, centered on the column, so the bad and good invites sit side by side. Below 1024px they stack, bad first. Inside an invite, the label/value field rows stack on mobile and become a two-column row at 640px, with labels held to a 5.5rem minimum width.
+The one exception is the invite comparison. At 1024px and up it breaks out of the column into a 960px (`breakout`) two-column grid with a 40px gap, centered on the column, so the bad and good invites sit side by side. Below 1024px they stack, bad first. Both sections span three subgrid rows (heading, invite, paragraph), so the headings, the cards, and the paragraphs start on the same lines, and the two cards stretch to the same height. Inside an invite, the label/value field rows stay side by side at every width, with labels in a fixed 5.5rem column; at 320px the value column is still about 158px, so values wrap within their own column rather than stacking under the label.
 
 The vertical rhythm is simple: major sections are separated by a 1px divider with 40px (`section`) above and below, and cards, callouts, and copy blocks sit 24px (`stack`) from their neighbors. The footer shares the 640px column and holds the share box, the book card, and a small centered credit line.
 
@@ -256,11 +263,12 @@ The page's central object. It's a stylized invite, not a working form.
 - **Shape:** Gently rounded card (12px) with a hairline border and the resting-sheet shadow, clipped so the header band follows the corners.
 - **Header band:** A Label-style "CALENDAR INVITE" strip with a 14px calendar icon and a 2px bottom border. Bad invites use Bad Wash with red text and a red-300 border. Good invites use Good Wash with green text and a green-300 border.
 - **Body:** 16px padding. The subject sits in Title type, followed by label/value field rows in 0.875rem. An empty field shows an italic muted "(none)". The good invite adds a numbered agenda under an Inner Rule divider, plus a paperclip read-ahead line.
+- **Height:** In the two-up grid both cards stretch to the taller one, and the body grows so the reaction line stays at the bottom. The bad card's extra empty space is part of the contrast.
 - **Reaction:** An italic Body Small footer line in muted gray, under an Inner Rule, giving the attendee's internal monologue.
 
 ### Subject-Line Correction (signature)
 
-The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through), then an accent arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen.
+The page's opening move and its one use of the correction pen. Between hairline rules, a "SUBJECT" Label sits beside the struck-through "Quick sync" (muted text, 2px Redline Pink line-through, Bright Redline Pink in dark mode, via the `accent-alt` token), then a matching pink arrow and the rewritten subject in semibold ink. The arrow and new subject wrap together, so on a phone the correction reads as two lines: old, then new. Visually hidden "from" and "to" make the change readable to screen readers. A one-sentence Body Small caption names the whole fix. It sits above the invite comparison so the fix shows on a phone's first screen. Just below the rules, a 0.875rem muted line ("On the receiving end of one?") carries an underlined Redline Pink link that jumps to the reply, for sharers who came for it.
 
 ### Copy Card
 
@@ -273,9 +281,13 @@ The page's opening move and its one use of the correction pen. Between hairline 
 
 - **Shape:** Gently rounded (6px), white surface, hairline border, 8px × 16px padding and a 44px minimum height for thumbs, 0.875rem text with a trailing 14px muted icon.
 - **Copy / share:** Redline Pink label text. The share variant sets the host in mono and, on touch screens where it opens the share sheet, swaps the copy icon and screen-reader verb for "share".
-- **Feedback:** "Copied!" replaces the label for 2 seconds while the button holds its width.
+- **Feedback:** "Copied!" replaces the label for 2 seconds while the button holds its width. If copying fails, the button says "Copy failed" and a 0.875rem muted hint appears under it and stays until a later copy succeeds: copy cards select their text and say so, and the share box shows the link in a mono, select-all span. The hint is `aria-hidden`, since the status region already announces the failure and the text.
 - **Hover:** The surface shifts to Blush Wash and the border to Redline Pink over 150ms. In dark mode the surface is Ink Navy and goes to Night Card on hover.
 - **Book CTA:** The one filled button: an 8px pill with the lime-to-pink gradient, Ink Navy semibold text, and an arrow that nudges 2px right on hover (motion-safe only). In print it falls back to a solid navy button.
+
+### Pull Statement
+
+The page's thesis as the question an organizer should ask: "Can this start as a document instead?" It opens the "If you're organizing" section, set in Pull type (semibold Ink Navy, white in dark mode) between Divider hairlines with 20px of padding, like the subject-line correction. It gets no accent color (it's neither a correction nor an action) and no serif. Use it once; supporting lines such as "Writing scales; meetings don't" stay as body copy.
 
 ### Callout
 

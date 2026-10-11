@@ -19,7 +19,7 @@ export const OG_IMAGE_ALT =
   "No Agenda, No Meeting — Please don't send meeting invites without an agenda.";
 
 export const DATE_PUBLISHED = "2026-04-05";
-export const DATE_MODIFIED = "2026-10-09";
+export const DATE_MODIFIED = "2026-10-11";
 
 // A copy-paste reply to an agenda-less invite, adapted from the note in
 // Open & Async's "Meetings are a point of escalation" chapter. The book's

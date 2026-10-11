@@ -16,7 +16,7 @@ const headerClass = {
 ---
 
 <div
-  class="dark:border-brand-600 dark:bg-brand-900 mt-4 mb-6 overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm"
+  class="dark:border-brand-600 dark:bg-brand-900 mb-6 flex flex-col overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm"
 >
   <div
     class:list={[
@@ -26,7 +26,9 @@ const headerClass = {
   >
     <CalendarDays aria-hidden="true" size={14} /> Calendar Invite
   </div>
-  <div class="p-4">
+  <!-- flex-1 keeps the reaction line at the bottom when the two-up grid
+       stretches both cards to the same height. -->
+  <div class="flex-1 p-4">
     <div class="mb-3 text-lg font-bold">{subject}</div>
     <slot />
   </div>

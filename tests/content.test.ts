@@ -53,11 +53,27 @@ describe("Page Content", () => {
     expect(found).toBe(true);
   });
 
-  // Advice is split by reader so "you" always means the same person.
+  // The reader is usually the organizer who was sent the link, so the decline
+  // reply is framed as their own experience as an invitee, and the page ends
+  // on the organizer advice and template rather than on the reply.
   it("should have separate sections for organizers and invitees", () => {
     const headings = Array.from(document.querySelectorAll("h2")).map((h) => h.textContent ?? "");
     expect(headings.some((h) => h.includes("If you're organizing"))).toBe(true);
-    expect(headings.some((h) => h.includes("If you got an invite like this"))).toBe(true);
+    expect(headings.some((h) => h.includes("When you're on the receiving end"))).toBe(true);
+  });
+
+  it("should end the article on the organizer section", () => {
+    const sections = document.querySelectorAll("article > section");
+    expect(sections[sections.length - 1]?.getAttribute("aria-labelledby")).toBe(
+      "if-youre-organizing",
+    );
+  });
+
+  // Sharers mostly came for the reply, so the top of the page links to it.
+  it("should link from the subject-line fix to the reply section", () => {
+    const link = document.querySelector('main a[href="#if-you-got-one"]');
+    expect(link).not.toBeNull();
+    expect(document.getElementById("if-you-got-one")?.closest("section")).not.toBeNull();
   });
 
   it("should put the agenda template with the organizer advice", () => {
@@ -103,6 +119,13 @@ describe("Page Content", () => {
       .map((el) => el.textContent)
       .join("");
     expect(text).not.toMatch(/[❌✅📅📎📋]/u);
+  });
+
+  // The cover is lazy-loaded, so its box must be reserved up front.
+  it("should give the lazy book cover its rendered dimensions", () => {
+    const img = document.querySelector("footer a.book-promo img");
+    expect(img?.getAttribute("width")).toBe("144");
+    expect(img?.getAttribute("height")).toBe("160");
   });
 
   it("should show the book cover and decorative commit graph in the book CTA", () => {

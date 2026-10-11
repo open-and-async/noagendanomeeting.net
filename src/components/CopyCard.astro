@@ -38,11 +38,12 @@ const invite = variant === "invite";
   <div class={invite ? "p-4" : undefined}>
     {preformatted ? (
       <pre
+        data-copy-source
         class="mb-3 font-sans text-[0.95rem] whitespace-pre-wrap text-gray-700 dark:text-gray-300"
         set:text={text}
       />
     ) : (
-      <blockquote class="mb-3 text-[0.95rem] text-gray-700 dark:text-gray-300">
+      <blockquote data-copy-source class="mb-3 text-[0.95rem] text-gray-700 dark:text-gray-300">
         <p>{text}</p>
       </blockquote>
     )}
@@ -56,5 +57,16 @@ const invite = variant === "invite";
       <Copy aria-hidden="true" size={14} class="text-gray-500 dark:text-gray-400" />
     </button>
     <span role="status" class="sr-only" data-copy-status></span>
+    <!-- Shown only if copying fails. The status region already announces the
+         failure and the text, so this visible hint is hidden from screen readers. -->
+    <p
+      data-copy-hint
+      hidden
+      aria-hidden="true"
+      class="mt-2 text-sm text-gray-600 dark:text-gray-400"
+    >
+      Couldn't copy automatically. The text above is selected, so copy it with your keyboard or
+      menu.
+    </p>
   </div>
 </div>
