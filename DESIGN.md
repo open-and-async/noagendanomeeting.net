@@ -32,6 +32,12 @@ typography:
     fontSize: "1.25rem"
     fontWeight: 500
     lineHeight: 1.5
+  pull:
+    fontFamily: "ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.5rem"
+    fontWeight: 600
+    lineHeight: 1.375
+    letterSpacing: "-0.025em"
   headline:
     fontFamily: "ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.25rem"
@@ -208,6 +214,7 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 - **Display** (400, 2.5rem from 640px up and 1.875rem below it, line-height 1.1, tight tracking): The page title only, plus "Open & Async" on the book card.
 - **Lede** (500, 1.125rem with line-height 1.5, rising to 1.25rem at 640px): The opening "Imagine getting a calendar invite…" paragraph.
+- **Pull** (600, 1.5rem, tight tracking, balanced): The one pull statement, "Can this start as a document instead?"
 - **Headline** (600, 1.25rem, tight tracking): Section headings ("Don't do this", "Why this matters"), sometimes led by a 22px icon.
 - **Title** (700, 1.125rem): The subject line inside an invite card.
 - **Body** (400, 1rem, line-height 1.625): Running prose, held to a 640px column of roughly 70 characters.
@@ -220,7 +227,7 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 **The Single Serif Rule.** DM Serif Display appears only in the page title and the book's name. Section headings stay sans, and adding the serif anywhere else dilutes the title.
 
-**The Document, Not Poster Rule.** Body text never goes above 1.25rem, and nothing but the title uses display sizes. The argument wins on clarity, not volume.
+**The Document, Not Poster Rule.** Body text never goes above 1.25rem, and nothing but the title uses display sizes. The one exception is the single pull statement at 1.5rem, which is the thesis, not body copy. The argument wins on clarity, not volume.
 
 ## Layout
 
@@ -276,6 +283,10 @@ The page's opening move and its one use of the correction pen. Between hairline 
 - **Feedback:** "Copied!" replaces the label for 2 seconds while the button holds its width.
 - **Hover:** The surface shifts to Blush Wash and the border to Redline Pink over 150ms. In dark mode the surface is Ink Navy and goes to Night Card on hover.
 - **Book CTA:** The one filled button: an 8px pill with the lime-to-pink gradient, Ink Navy semibold text, and an arrow that nudges 2px right on hover (motion-safe only). In print it falls back to a solid navy button.
+
+### Pull Statement
+
+The page's thesis as the question an organizer should ask: "Can this start as a document instead?" It opens the "If you're organizing" section, set in Pull type (semibold Ink Navy, white in dark mode) between Divider hairlines with 20px of padding, like the subject-line correction. It gets no accent color (it's neither a correction nor an action) and no serif. Use it once; supporting lines such as "Writing scales; meetings don't" stay as body copy.
 
 ### Callout
 
