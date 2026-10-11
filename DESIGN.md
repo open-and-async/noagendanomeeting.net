@@ -233,7 +233,7 @@ A neutral paper-and-ink base with one editing-pen accent, plus a pair of semanti
 
 The page is a single centered column (`column`, 640px) with a 16px side gutter (`gutter`) that widens to 24px (`gutter-sm`) at 640px. Top padding goes from 32px to 48px at the same breakpoint.
 
-The one exception is the invite comparison. At 1024px and up it breaks out of the column into a 960px (`breakout`) two-column grid with a 40px gap, centered on the column, so the bad and good invites sit side by side. Below 1024px they stack, bad first. Inside an invite, the label/value field rows stack on mobile and become a two-column row at 640px, with labels held to a 5.5rem minimum width.
+The one exception is the invite comparison. At 1024px and up it breaks out of the column into a 960px (`breakout`) two-column grid with a 40px gap, centered on the column, so the bad and good invites sit side by side. Below 1024px they stack, bad first. Both sections span three subgrid rows (heading, invite, paragraph), so the headings, the cards, and the paragraphs start on the same lines, and the two cards stretch to the same height. Inside an invite, the label/value field rows stay side by side at every width, with labels in a fixed 5.5rem column; at 320px the value column is still about 158px, so values wrap within their own column rather than stacking under the label.
 
 The vertical rhythm is simple: major sections are separated by a 1px divider with 40px (`section`) above and below, and cards, callouts, and copy blocks sit 24px (`stack`) from their neighbors. The footer shares the 640px column and holds the share box, the book card, and a small centered credit line.
 
@@ -263,6 +263,7 @@ The page's central object. It's a stylized invite, not a working form.
 - **Shape:** Gently rounded card (12px) with a hairline border and the resting-sheet shadow, clipped so the header band follows the corners.
 - **Header band:** A Label-style "CALENDAR INVITE" strip with a 14px calendar icon and a 2px bottom border. Bad invites use Bad Wash with red text and a red-300 border. Good invites use Good Wash with green text and a green-300 border.
 - **Body:** 16px padding. The subject sits in Title type, followed by label/value field rows in 0.875rem. An empty field shows an italic muted "(none)". The good invite adds a numbered agenda under an Inner Rule divider, plus a paperclip read-ahead line.
+- **Height:** In the two-up grid both cards stretch to the taller one, and the body grows so the reaction line stays at the bottom. The bad card's extra empty space is part of the contrast.
 - **Reaction:** An italic Body Small footer line in muted gray, under an Inner Rule, giving the attendee's internal monologue.
 
 ### Subject-Line Correction (signature)

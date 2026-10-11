@@ -73,11 +73,13 @@ import { homeGraph } from "../jsonld";
       </p>
 
       <!-- On wide screens the two invites sit side by side, breaking out of the
-           text column, since the contrast between them is the page's argument. -->
+           text column, since the contrast between them is the page's argument.
+           Each section spans three subgrid rows (heading, invite, paragraph), so
+           the headings, cards and paragraphs line up across the two columns. -->
       <div
-        class="lg:relative lg:left-1/2 lg:grid lg:w-[60rem] lg:-translate-x-1/2 lg:grid-cols-2 lg:gap-10"
+        class="lg:relative lg:left-1/2 lg:grid lg:w-[60rem] lg:-translate-x-1/2 lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-x-10"
       >
-        <section aria-labelledby="before">
+        <section aria-labelledby="before" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
           <h2
             id="before"
             class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
@@ -91,7 +93,7 @@ import { homeGraph } from "../jsonld";
             subject="Quick sync"
             reaction="Am I in trouble? Do I need to prepare? What is this even about? 😰"
           >
-            <InviteField label="When" value="Tuesday, 2:00 – 2:30 PM" />
+            <InviteField label="When" value={"Tuesday, 2:00 – 2:30\u00a0PM"} />
             <InviteField label="Goal" />
             <InviteField label="Agenda" />
             <InviteField label="Read-ahead" />
@@ -105,7 +107,7 @@ import { homeGraph } from "../jsonld";
           </p>
         </section>
 
-        <section aria-labelledby="after">
+        <section aria-labelledby="after" class="lg:row-span-3 lg:grid lg:grid-rows-subgrid">
           <h2
             id="after"
             class="mt-10 mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight"
@@ -119,7 +121,7 @@ import { homeGraph } from "../jsonld";
             subject="Q3 launch: go/no-go decision"
             reaction="Everyone arrives prepared. The meeting is focused. Better decisions get made. ✨"
           >
-            <InviteField label="When" value="Tuesday, 2:00 – 2:30 PM" />
+            <InviteField label="When" value={"Tuesday, 2:00 – 2:30\u00a0PM"} />
             <InviteField label="Goal" value="Decide whether the Q3 beta ships" />
             <div class="dark:border-brand-600 mt-3 border-t border-gray-100 pt-3">
               <div
