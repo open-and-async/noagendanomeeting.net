@@ -121,6 +121,13 @@ describe("Page Content", () => {
     expect(text).not.toMatch(/[❌✅📅📎📋]/u);
   });
 
+  // The cover is lazy-loaded, so its box must be reserved up front.
+  it("should give the lazy book cover its rendered dimensions", () => {
+    const img = document.querySelector("footer a.book-promo img");
+    expect(img?.getAttribute("width")).toBe("144");
+    expect(img?.getAttribute("height")).toBe("160");
+  });
+
   it("should show the book cover and decorative commit graph in the book CTA", () => {
     const cta = document.querySelector("footer a.book-promo");
     expect(cta?.querySelector('img[alt="Open & Async book cover"]')).not.toBeNull();
