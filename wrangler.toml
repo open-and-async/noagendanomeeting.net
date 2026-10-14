@@ -2,6 +2,9 @@
 # https://developers.cloudflare.com/workers/static-assets/
 
 name = "noagendanomeeting-net"
+# The Open and Async LLC account. Pinned so a local `wrangler deploy` can't land
+# in whichever other account the login happens to pick.
+account_id = "6b6495c4294f822a7ad897d3071feca9"
 compatibility_date = "2026-04-05"
 # Serve only on the custom domain so *.workers.dev copies aren't indexed.
 workers_dev = false
