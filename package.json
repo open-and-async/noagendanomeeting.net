@@ -43,7 +43,7 @@
     "@types/jsdom": "^30.0.0",
     "@types/node": "^25.5.2",
     "@vitest/coverage-v8": "^5.0.0",
-    "astro": "7.3.8",
+    "astro": "7.4.0",
     "html-validate": "11.16.4",
     "jsdom": "^30.0.0",
     "png-to-ico": "3.0.2",
