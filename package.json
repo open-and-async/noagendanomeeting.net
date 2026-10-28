@@ -41,7 +41,7 @@
     "@lucide/astro": "1.60.0",
     "@tailwindcss/vite": "^4.1.18",
     "@types/jsdom": "^30.0.0",
-    "@types/node": "^25.5.2",
+    "@types/node": "^26.0.0",
     "@vitest/coverage-v8": "^5.0.0",
     "astro": "7.4.1",
     "html-validate": "11.17.0",
