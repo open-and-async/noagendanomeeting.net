@@ -50,7 +50,7 @@
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^1.0.0",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "satori": "0.62.0",
+    "satori": "0.63.2",
     "schema-dts": "2.1.0",
     "sharp": "0.35.5",
     "tailwindcss": "^4.1.18",
